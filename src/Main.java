@@ -8,18 +8,21 @@ public class Main {
 
         while(1 == 1){
             System.out.println("------- Calculator -------");
+            System.out.println("If you want leave, type it 'Close'");
 
             System.out.println("Entered first value : ");
-            int n1 = Integer.parseInt(myObj.next());
+            String n1 = myObj.next();
+            if(n1.equals("Close")) { System.exit(0); }
 
             System.out.println("Entered second value : ");
-            int n2 = Integer.parseInt(myObj.next());
+            String n2 = myObj.next();
+            if(n2.equals("Close")) { System.exit(0); }
 
             System.out.println("The result is : " + sum(n1, n2));
         }
     }
 
-    public static int sum(int n1, int n2) {
-        return n1 + n2;
+    public static int sum(String n1, String n2) {
+        return Integer.parseInt(n1) + Integer.parseInt(n2);
     }
 }
