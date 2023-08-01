@@ -8,13 +8,15 @@ public class Main {
         System.out.println("------- Calculator -------");
 
         System.out.println("Entered first value : ");
-        String n1 = myObj.next();
+        int n1 = Integer.parseInt(myObj.next());
 
         System.out.println("Entered second value : ");
-        String n2 = myObj.next();
+        int n2 = Integer.parseInt(myObj.next());
 
-        int sum = Integer.parseInt(n1) + Integer.parseInt(n2);
+        System.out.println("The result is : " + sum(n1, n2));
+    }
 
-        System.out.println("The result is : " + sum);
+    public static int sum(int n1, int n2) {
+        return n1 + n2;
     }
 }
